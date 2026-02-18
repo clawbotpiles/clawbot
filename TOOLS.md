@@ -35,6 +35,22 @@ Things like:
 
 Skills are shared. Your setup is yours. Keeping them apart means you can update skills without losing your notes, and share skills without leaking your infrastructure.
 
+### IDEs Instalados
+- **Antigravity** → `/usr/bin/antigravity`
+  - Versión: 1.107.0
+  - Google IDE basado en Electron
+  - Node: v22.20.0
+  - Ejecutar: `antigravity`
+  - Usado para: Proyecto Flutter con equipo AI
+
+### Proyecto Activo: Flutter App
+- **Equipo:** 7 agentes AI (arquitectura SOUL.md)
+- **Level:** Producción empresarial (FAANG-tier)
+- **Stack:** Flutter + Dart + Riverpod + Firebase
+- **IDE:** Antigravity (Google)
+- **Estado:** ⏳ Esperando requerimientos de Radulenko
+- **Docs:** `memory/projects/flutter-app/`
+
 ---
 
 Add whatever helps you do your job. This is your cheat sheet.

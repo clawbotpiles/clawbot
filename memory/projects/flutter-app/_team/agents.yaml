@@ -1,0 +1,166 @@
+# Configuración del Equipo AI Flutter
+# Basado en arquitectura SOUL.md de 7 capas
+# Nivel: Producción empresarial (FAANG-tier)
+
+version: "1.0.0"
+project: flutter-app
+coordinator: clawbot
+team_size: 7
+
+agents:
+  # Capa 1: Inteligencia + Diseño + Arquitectura
+  - id: flutter_tech_lead
+    name: "Flutter Technical Lead"
+    model: nvidia-nim/moonshotai/kimi-k2.5
+    thinking: extended
+    layer: [intelligence, design, architecture]
+    expertise:
+      - Flutter internals
+      - Clean Architecture
+      - Domain-Driven Design
+      - State management patterns
+      - Performance optimization
+    responsibilities:
+      - Define project architecture
+      - Review technical decisions
+      - Mentor other agents
+      - ADR documentation
+    active: false
+    spawned_session: null
+
+  # Capa 3: Implementación Principal  
+  - id: flutter_dev_senior
+    name: "Senior Flutter Developer"
+    model: nvidia-nim/moonshotai/kimi-k2.5
+    thinking: on
+    layer: [implementation]
+    expertise:
+      - Advanced widgets
+      - State management
+      - Testing strategies
+      - Platform channels
+    responsibilities:
+      - UI implementation
+      - Feature development
+      - Widget testing
+      - Code generation
+    active: false
+    spawned_session: null
+
+  # Capa 3: APIs + Data
+  - id: backend_integration_engineer
+    name: "Backend Integration Engineer"
+    model: nvidia-nim/moonshotai/kimi-k2.5
+    thinking: on
+    layer: [implementation]
+    expertise:
+      - REST/GraphQL
+      - Authentication
+      - Offline-first
+      - Data persistence
+    responsibilities:
+      - API layer
+      - Repository pattern
+      - Auth flows
+      - Data sync
+    active: false
+    spawned_session: null
+
+  # Capa 3: Infraestructura
+  - id: devops_cloud_engineer
+    name: "DevOps & Cloud Engineer"
+    model: nvidia-nim/moonshotai/kimi-k2.5
+    thinking: on
+    layer: [implementation]
+    expertise:
+      - CI/CD pipelines
+      - Fastlane
+      - Firebase
+      - Code signing
+    responsibilities:
+      - Build automation
+      - Release management
+      - Firebase configuration
+      - Environment setup
+    active: false
+    spawned_session: null
+
+  # Capa 4: Control + Validación
+  - id: qa_automation_specialist
+    name: "QA Automation Specialist"
+    model: nvidia-nim/moonshotai/kimi-k2.5
+    thinking: on
+    layer: [control, validation]
+    expertise:
+      - Testing pyramid
+      - Patrol E2E
+      - Golden tests
+      - Performance testing
+    responsibilities:
+      - Test suite
+      - Coverage reports
+      - CI test integration
+      - Quality gates
+    active: false
+    spawned_session: null
+
+  # Capa 5+6: Seguridad + Optimización
+  - id: security_performance_optimizer
+    name: "Security & Performance Optimizer"
+    model: nvidia-nim/moonshotai/kimi-k2.5
+    thinking: extended
+    layer: [security, optimization]
+    expertise:
+      - Mobile security
+      - Performance profiling
+      - App size optimization
+      - Memory management
+    responsibilities:
+      - Security audits
+      - Performance analysis
+      - Optimization reports
+      - Obfuscation setup
+    active: false
+    spawned_session: null
+
+  # Capa 2: Design + UX
+  - id: ux_accessibility_designer
+    name: "UX & Accessibility Designer"
+    model: nvidia-nim/moonshotai/kimi-k2.5
+    thinking: on
+    layer: [design, architecture]
+    expertise:
+      - Design systems
+      - Material 3
+      - Accessibility (WCAG)
+      - Animations
+    responsibilities:
+      - Design tokens
+      - Component library
+      - Accessibility compliance
+      - Micro-interactions
+    active: false
+    spawned_session: null
+
+# Configuración de comunicación
+communication:
+  protocol: sessions_spawn
+  coordinator_channel: workspace
+  handoff_method: memory_sync
+  reporting_interval: task_completion
+
+# Herramientas disponibles
+tools:
+  - exec
+  - write
+  - read
+  - edit
+  - browser
+  - canvas
+  - cron
+  
+# Restricciones
+constraints:
+  prevent_gh_cli_overwrite: true
+  require_approval_for: [infrastructure_changes, security_modifications]
+  max_parallel_agents: 3
