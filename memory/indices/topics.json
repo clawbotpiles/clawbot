@@ -1,0 +1,21 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-02-17",
+  "topics": {
+    "sistema-multiagente": {
+      "files": ["SOUL.md", "memory/meta/soul-versions/v1.0-20260217.md"],
+      "tags": ["arquitectura", "identidad", "gobernanza"],
+      "priority": "critical"
+    },
+    "memoria": {
+      "files": ["memory/README.md", "memory/INDEX.md"],
+      "tags": ["estructura", "optimización"],
+      "priority": "high"
+    },
+    "radulenko": {
+      "files": ["memory/behavioral/preferences.md", "USER.md"],
+      "tags": ["autoridad", "preferencias", "contexto"],
+      "priority": "critical"
+    }
+  }
+}
